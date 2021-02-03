@@ -1,5 +1,4 @@
 import requests
-from html import unescape
 
 parameters = {
     "amount" : 10,
@@ -10,7 +9,7 @@ response = requests.get('https://opentdb.com/api.php', params=parameters)
 response.raise_for_status()
 
 questions = response.json()
-print(questions)
+# print(questions)
 question_data = questions['results']
 
 
